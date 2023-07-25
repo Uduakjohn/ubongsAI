@@ -45,5 +45,5 @@ app.post('/', async (req, res) => {
     res.status(500).send(error || 'Something went wrong');
   }
 })
-let url = "https://ubbysai.onrender.com"
+
 app.listen(5000, () => console.log('AI server started on https://ubbysai.onrender.com'))
