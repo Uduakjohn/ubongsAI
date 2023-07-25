@@ -6,7 +6,7 @@ import { Configuration, OpenAIApi } from 'openai'
 dotenv.config()
 
 const configuration = new Configuration({
-  apiKey : "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"
+  apiKey : "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"
   //apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -18,7 +18,7 @@ app.use(express.json())
 
 app.get('/', async (req, res) => {
   res.status(200).send({
-    message: 'Hello from CodeX!'
+    message: 'Hello from Bonnke!'
   })
 })
 
@@ -45,5 +45,5 @@ app.post('/', async (req, res) => {
     res.status(500).send(error || 'Something went wrong');
   }
 })
-
-app.listen(5000, () => console.log('AI server started on http://localhost:5000'))
+let url = "https://ubbysai.onrender.com"
+app.listen(5000, () => console.log('AI server started on https://ubbysai.onrender.com'))
