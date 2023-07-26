@@ -1,6 +1,6 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
-import axios from 'axios';
+
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
@@ -86,11 +86,10 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://ubbysai.onrender.com', {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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',
         },
         body: JSON.stringify({
             prompt: data.get('prompt')
